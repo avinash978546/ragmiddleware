@@ -1,0 +1,14 @@
+RAG-Guard Overview:
+RAG-Guard is a local, offline evaluation and guardrails harness for Retrieval-Augmented Generation (RAG) pipelines.
+Its main goal is to protect against security vulnerabilities such as indirect prompt injection and to monitor retrieval/generation quality metrics (like faithfulness and relevancy).
+
+Key Components of RAG-Guard:
+1. Ingestion Layer: Parses local documents (PDFs and TXT files), chunks them, and generates embeddings using local models.
+2. Retrieval Layer: Stores and queries embeddings using a local Qdrant vector database in embedded mode.
+3. Middleware Checkpoint 1 (Pre-generation): Scans retrieved context chunks for potential indirect prompt injection using a fine-tuned DeBERTa model and checks for PII using Microsoft Presidio.
+4. Middleware Checkpoint 2 (Post-generation): Validates generated answers for faithfulness (using NLI entailment), answer relevancy, toxicity, and output PII leaks.
+5. Dashboard & Reporting: Displays quantitative metrics and scores in a local Streamlit dashboard.
+
+Milestone 1 Implementation:
+The first milestone (M1) sets up the base RAG pipeline end-to-end without any middleware or evaluation metrics. It ingests documents from data/raw_docs/, chunks them, stores them in Qdrant, retrieves top matches, and uses a local Ollama model to generate the final response.
+By default, the LLM used for Milestone 1 generation is gemma3:1b.

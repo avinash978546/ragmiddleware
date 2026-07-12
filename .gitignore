@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment secrets — NEVER commit API keys or local config
+.env
+
+# Local vector database (regenerated on ingest)
+data/qdrant_db/
+
+# IDE / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+# Scratch / temp
+scratch/
+
+# Model cache (downloaded automatically on first run)
+.cache/
+models/
