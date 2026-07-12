@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RAG-Guard (M1–M3)
 
 RAG-Guard is a local, offline evaluation and guardrails harness for Retrieval-Augmented Generation (RAG) pipelines. This repository implements milestones through **M3 (Pre-Generation Middleware)**.
@@ -158,3 +159,6 @@ PII (emails, phone numbers, SSNs, etc.) is always redacted via Presidio tags lik
 ## Next: M4
 
 Post-generation middleware — faithfulness scoring (NLI cross-encoder), answer relevancy, Detoxify toxicity check, and output PII leak detection.
+=======
+# ragmiddleware
+>>>>>>> 149c7221e21a1387ef031e61185a3c4cca74af8c
